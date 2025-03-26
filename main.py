@@ -305,4 +305,9 @@ figures = read_figures_from_file('input01.txt')
 largest_figure = find_largest_figure(figures)
 
 # Виводимо результат
-print(f"The largest figure is {largest_figure.__class__.__name__} with measure: {largest_figure.volume()}")
+output_string = f"The largest figure is {largest_figure.__class__.__name__} with measure: {largest_figure.volume()}"
+
+# Запис у .txt файл
+with open("output.txt", 'w') as file:
+    file.write(output_string)
+
